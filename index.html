@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical New Year Wishes | Send Joy</title>
+    <meta name="description" content="Send a beautiful, animated New Year card to your loved ones. Spread the joy with fireworks and personalized messages.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader-wrapper" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <canvas id="fireworksCanvas"></canvas>
+
+    <main class="container">
+        <!-- Home State -->
+        <section id="home-view" class="view active">
+            <div class="hero">
+                <h1 class="glow-text">සුභ අලුත් අවුරුද්දක් වේවා ! 2026</h1>
+                <p class="subtitle">නව වසරේ ඔන්ලයින් පැතුම් යවමු.</p>
+                <button id="start-btn" class="primary-btn">පැතුම් ඒක් කරන්න</button>
+            </div>
+        </section>
+
+        <!-- Form State -->
+        <section id="create-view" class="view">
+            <div class="card-form glass">
+                <h2>අලුත් අව්රුද්දේ ඔ‌ෙබේ යහලුවන්ට සුභ පැතුම් ඒක් කරන්න</h2>
+                <div class="input-group">
+                    <label for="sender-name">ඔබේ නම</label>
+                    <input type="text" id="sender-name" placeholder="E.g. Alex" maxlength="20">
+                </div>
+                <div class="input-group">
+                    <label for="recipient-name">ලබන්නාගේ නම</label>
+                    <input type="text" id="recipient-name" placeholder="E.g. Sarah" maxlength="20">
+                </div>
+                <div class="input-group">
+                    <label for="wish-message">ඔබේ පණිවිඩය</label>
+                    <textarea id="wish-message" rows="4" placeholder="Write something heartwarming..." maxlength="150"></textarea>
+                </div>
+                <div class="button-row">
+                    <button id="preview-btn" class="primary-btn">කාඩ් පත සකසන්න</button>
+                    <button id="back-home-btn" class="secondary-btn">ආපසු</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Display State -->
+        <section id="card-view" class="view">
+            <div class="card-container">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-back"></div>
+                    <div class="letter">
+                        <div class="letter-content glass">
+                            <span class="confetti-icon">✨</span>
+                            <h3 id="display-recipient">To My Dearest Sarah,</h3>
+                            <p id="display-message">May this year bring you endless joy, laughter, and success. Cheers to a new beginning!</p>
+                            <p class="signature">- <span id="display-sender">Alex</span></p>
+                        </div>
+                    </div>
+                    <div class="envelope-top"></div>
+                    <div class="envelope-front"></div>
+                </div>
+                <div class="card-controls" id="card-controls">
+                    <button id="share-btn" class="primary-btn">මිතුරන්ට යවන්න</button>
+                    <button id="create-new-btn" class="secondary-btn">අලුත් කාඩ් ඒක් කරන්න</button>
+                </div>
+                <p class="instruction" id="click-instruction">පැතුම විවර කරන්න</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 New Year Wishes. Crafted with ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
